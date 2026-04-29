@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANCAMIX | CSC COMERCIO DE EQUIPAMENTOS LTDA.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --car-red: #d32f2f;
+            --deep-carbon: #121212;
+            --road-gray: #2c2c2c;
+            --silver: #e0e0e0;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--road-gray); background: var(--white); }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; color: var(--deep-carbon); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* HERO SECTION */
+        .hero { 
+            height: 90vh; 
+            display: flex; 
+            align-items: center; 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
+            color: var(--white); 
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .hero-content { max-width: 700px; }
+        .hero h1 { font-size: 5rem; line-height: 1; margin-bottom: 20px; color: var(--white); }
+        .hero span { color: var(--car-red); }
+        .hero p { font-size: 1.2rem; letter-spacing: 1px; margin-bottom: 30px; border-left: 3px solid var(--car-red); padding-left: 15px; }
+
+        /* SECTIONS */
+        section { padding: 100px 0; }
+        .label { color: var(--car-red); font-weight: 700; font-size: 0.9rem; letter-spacing: 3px; display: block; margin-bottom: 10px; }
+        .section-title { font-size: 3rem; margin-bottom: 40px; border-bottom: 5px solid var(--car-red); display: inline-block; }
+
+        /* ABOUT */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-text p { margin-bottom: 20px; font-size: 1.1rem; }
+
+        /* SERVICES */
+        .services { background: var(--deep-carbon); color: var(--white); }
+        .services h2 { color: var(--white); }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { padding: 40px; background: var(--road-gray); transition: var(--transition); border-top: 4px solid var(--car-red); }
+        .service-card:hover { background: var(--car-red); transform: translateY(-5px); }
+        .service-card h3 { color: var(--white); margin-bottom: 15px; font-size: 1.5rem; }
+
+        /* CONTACT */
+        .contact-wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 700; margin-bottom: 5px; font-size: 0.8rem; }
+        .form-control { width: 100%; padding: 15px; background: var(--silver); border: none; font-family: inherit; }
+        .form-control:focus { outline: 2px solid var(--car-red); }
+        .btn-submit { padding: 15px 40px; background: var(--car-red); color: white; border: none; font-family: 'Oswald'; cursor: pointer; transition: var(--transition); width: 100%; }
+        .btn-submit:hover { background: var(--deep-carbon); }
+
+        /* FOOTER */
+        footer { padding: 60px 0; background: var(--deep-carbon); color: var(--silver); font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+        .footer-brand h2 { color: var(--white); margin-bottom: 10px; }
+        .copyright { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--road-gray); text-align: center; opacity: 0.6; }
+
+        @media (max-width: 768px) {
+            .about-grid, .contact-wrap, .footer-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Lanca<span>mix</span></h1>
+                <p>CSC COMERCIO DE EQUIPAMENTOS LTDA.<br>Ваш надежный партнер на рынке автомобилей с пробегом.</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="label">О компании</span>
+                    <h2 class="section-title">Качество и Доверие</h2>
+                    <p>LANCAMIX — это торговая марка CSC COMERCIO DE EQUIPAMENTOS LTDA., специализирующаяся на розничной торговле транспортными средствами. Мы предлагаем проверенные автомобили, прошедшие строгую техническую экспертизу.</p>
+                    <p>Под руководством Серджио Маньо Перейра мы стремимся сделать процесс покупки автомобиля прозрачным, быстрым и безопасным для каждого клиента.</p>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=1000" alt="Showroom" style="width: 100%; box-shadow: -20px 20px 0 var(--car-red);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <span class="label">Услуги</span>
+            <h2 class="section-title">Направления деятельности</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Продажа авто</h3>
+                    <p>Широкий выбор подержанных автомобилей различных классов, от городских малолитражек до мощных внедорожников.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Оценка и Trade-in</h3>
+                    <p>Профессиональная оценка вашего текущего автомобиля и выгодные условия обмена на новый транспорт из нашего парка.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Консалтинг</h3>
+                    <p>Экспертная помощь в выборе оборудования и транспортных средств, соответствующих вашим бизнес-задачам.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-wrap">
+                <div class="contact-info">
+                    <span class="label">Связь</span>
+                    <h2 class="section-title">Свяжитесь с нами</h2>
+                    <p>Готовы обновить свой автопарк? Напишите нам, и наши специалисты подберут лучшее предложение.</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label>Ваше имя</label>
+                            <input type="text" class="form-control" placeholder="Имя Фамилия">
+                        </div>
+                        <div class="form-group">
+                            <label>Электронная почта</label>
+                            <input type="email" class="form-control" placeholder="info@csccomerciodeequipamentos.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Сообщение</label>
+                            <textarea class="form-control" rows="4" placeholder="Какая модель вас интересует?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Отправить запрос</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>LANCAMIX</h2>
+                    <p>Юридическое лицо: CSC COMERCIO DE EQUIPAMENTOS LTDA.</p>
+                    <p>Email: info@csccomerciodeequipamentos.com</p>
+                </div>
+                <div class="footer-nav">
+                    <p><strong>Отрасль:</strong> Розничная торговля автомобилями</p>
+                    <p><strong>Специализация:</strong> Дилеры подержанных авто</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 CSC COMERCIO DE EQUIPAMENTOS LTDA. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
